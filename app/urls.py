@@ -6,10 +6,12 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 from rest_framework.routers import DefaultRouter
+
 from core.views import (
     CustomTokenObtainPairView,
     CustomTokenRefreshView,
     CustomTokenVerifyView,
+    TextViewSet,
     UserRegistrationView,
     UserViewSet,
 )
@@ -17,6 +19,7 @@ from core.views import (
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
+router.register(r'texts', TextViewSet, basename='texts')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
