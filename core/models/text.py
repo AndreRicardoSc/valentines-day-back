@@ -6,4 +6,4 @@ class Text(models.Model):
     date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f'({self.id} - {self.title})'
+        return f'({self.id}) - {self.title}'
